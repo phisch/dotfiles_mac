@@ -1,0 +1,19 @@
+[user]
+	email = philipp.schaffrath@gmail.com
+	name = Philipp Schaffrath
+	signingkey = E5D3C326D00A7C3D!
+[core]
+	excludesFile = ~/.gitignore.global
+[commit]
+	gpgSign = true
+[advice]
+	addIgnoredFile = false
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
