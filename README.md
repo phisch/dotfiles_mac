@@ -28,3 +28,27 @@ The setup script enables remote login via SSH, this requires **Full Disk Access*
 1) Open **System Settings**
 2) Navigate to Privacy & Security -> Full Disk Access
 3) Click on **+**, then navigate to and select **Applications -> Utilities -> Terminal**
+
+## Updates
+
+I do not want MacOS to automatically update and restart. The only updates I want to happen automatically are background security updates. For that:
+
+1) Go to `System Settings -> General -> Software update`
+2) Click on the `i` next to `Automatic Updates`
+3) Enable `Download new updates when available`
+4) Disable `Install macOS updates`
+5) Enable `Install system data files and security updates`
+
+### Manual updates
+
+Updates can be performed using:
+
+```
+sudo softwareupdate -i -a
+```
+
+After updates are done, macOS has to be rebooted. But FileVault would require a manual login, which can be prevented by restarting using:
+
+```
+sudo fdesetup -authrestart
+```
