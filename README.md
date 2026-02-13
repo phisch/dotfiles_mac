@@ -41,14 +41,14 @@ I do not want MacOS to automatically update and restart. The only updates I want
 
 ### Manual updates
 
-Updates can be performed using:
+Some updates require a reboot, so lets pre-authenticate the next reboot using:
 
 ```
-sudo softwareupdate -i -a
+sudo fdesetup authrestart -delayminutes -1
 ```
 
-After updates are done, macOS has to be rebooted. But FileVault would require a manual login, which can be prevented by restarting using:
+After which macOS can be updated using:
 
 ```
-sudo fdesetup authrestart
+sudo softwareupdate --install --all --restart
 ```
