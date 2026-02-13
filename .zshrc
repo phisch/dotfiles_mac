@@ -6,6 +6,6 @@ else
     export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
-if [[ $- == *i* ]] && command -v nu >/dev/null 2>&1; then
+if [[ -n "$PS1" ]] && [[ -t 0 ]] && command -v nu >/dev/null 2>&1; then
     exec nu
 fi
