@@ -19,3 +19,5 @@ cask "alacritty"
 brew "nushell"
 brew "starship"
 brew "carapace"
+
+cask "yubico-authenticator"
