@@ -50,5 +50,5 @@ sudo softwareupdate -i -a
 After updates are done, macOS has to be rebooted. But FileVault would require a manual login, which can be prevented by restarting using:
 
 ```
-sudo fdesetup -authrestart
+sudo fdesetup authrestart
 ```
