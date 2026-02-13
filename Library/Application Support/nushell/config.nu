@@ -74,8 +74,6 @@ $env.config = {
   ]
 }
 
-$env.GPG_TTY = (tty)
-$env.SSH_AUTH_SOCK = (gpgconf --list-dirs agent-ssh-socket)
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
