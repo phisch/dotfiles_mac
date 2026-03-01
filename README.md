@@ -52,3 +52,30 @@ After which macOS can be updated using:
 ```
 sudo softwareupdate --install --all --restart
 ```
+
+
+## RAID
+
+```sh
+sudo kextload /Library/Extensions/zfs.kext
+# System Extension Blocked
+```
+
+1) Run `sudo kextload /Library/Extensions/zfs.kext`
+2) Click `OK` in the `System Extension Blocked` dialog
+3) Go to `System Settings -> Privacy & Security`
+4) Click `Allow` under `System software from developer "Joergen Lundman" was blocked from loading.`
+5) Enter your **password** and hit `Modify Settings`
+6) Restart the Mac
+
+
+The OpenZFS LaunchDaemon requires **Full Disk Access** for `/bin/bash`:
+
+1) Go to `System Settings -> Privacy & Security -> Full Disk Access`
+2) Hit `+`
+3) Press `Command + Shift + G` and enter `/bin/bash`
+
+
+```
+sudo zpool import
+```
